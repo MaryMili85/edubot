@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EduBot - Asistente Virtual Escolar</title>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <!-- ENCABEZADO -->
+        <header>
+            <div class="logo">🤖</div>
+
+            <div>
+                <h1>EduBot</h1>
+                <p>Asistente Virtual Escolar</p>
+            </div>
+        </header>
+
+
+        <!-- CHAT -->
+        <main id="chat">
+
+            <div class="mensaje bot">
+                <strong>🤖 EduBot:</strong>
+                <p>
+                    ¡Hola! 👋 Soy EduBot.
+                    Puedo ayudarte con información de la institución.
+                </p>
+            </div>
+
+        </main>
+
+
+        <!-- BOTONES -->
+        <section class="opciones">
+
+            <button onclick="preguntaRapida('horario')">
+                🕐 Horarios
+            </button>
+
+            <button onclick="preguntaRapida('materias')">
+                📚 Materias
+            </button>
+
+            <button onclick="preguntaRapida('aulas')">
+                🏫 Aulas
+            </button>
+
+            <button onclick="preguntaRapida('biblioteca')">
+                📖 Biblioteca
+            </button>
+
+            <button onclick="preguntaRapida('actividades')">
+                🎉 Actividades
+            </button>
+
+            <button onclick="preguntaRapida('normas')">
+                📜 Normas
+            </button>
+
+        </section>
+
+
+        <!-- ENTRADA -->
+        <section class="entrada">
+
+            <input
+                type="text"
+                id="pregunta"
+                placeholder="Escribe tu pregunta..."
+                onkeypress="presionarEnter(event)"
+            >
+
+            <button onclick="enviarPregunta()">
+                Enviar
+            </button>
+
+        </section>
+
+
+        <footer>
+            Proyecto RETEC - Desarrollo de Software
+        </footer>
+
+    </div>
+
+    <script src="chatbot.js"></script>
+
+</body>
+</html>
