@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduBot - U.E. Distrito Metropolitano</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <!-- ENCABEZADO -->
+        <header>
+            <img src="logo-colegio.jpg" alt="Logo Colegio" class="logo-colegio">
+            <div>
+                <h1>EduBot</h1>
+                <p>Asistente Virtual Escolar - U.E. "Distrito Metropolitano"</p>
+            </div>
+        </header>
+
+        <!-- CHAT -->
+        <main id="chat">
+
+            <div class="mensaje bot">
+                <img src="bot-avatar.png" alt="EduBot" class="avatar-msg">
+                <div>
+                    <strong>EduBot:</strong>
+                    <p>
+                        ¡Hola! 👋 Soy EduBot, el asistente virtual de la U.E. "Distrito Metropolitano". 
+                        Selecciona uno de nuestros 6 módulos o escribe tu pregunta.
+                    </p>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- BOTONES DE LOS 6 MÓDULOS EXACTOS -->
+        <section class="opciones">
+
+            <button onclick="preguntaRapida('general')">
+                ℹ️ Info General
+            </button>
+
+            <button onclick="preguntaRapida('horarios')">
+                ⏰ Horarios de Clases
+            </button>
+
+            <button onclick="preguntaRapida('tramites')">
+                📋 Trámites y Secretaría
+            </button>
+
+            <button onclick="preguntaRapida('ubicacion')">
+                🏫 Ubicación de Aulas
+            </button>
+
+            <button onclick="preguntaRapida('matriculas')">
+                📝 Matrículas - Traslados
+            </button>
+
+            <button onclick="preguntaRapida('normativa')">
+                📜 Normativa Interna
+            </button>
+
+        </section>
+
+        <!-- ENTRADA DE TEXTO -->
+        <section class="entrada">
+
+            <input
+                type="text"
+                id="pregunta"
+                placeholder="Escribe tu pregunta..."
+                onkeypress="presionarEnter(event)"
+            >
+
+            <button onclick="enviarPregunta()">
+                Enviar
+            </button>
+
+        </section>
+
+        <footer>
+            Proyecto Informática - Desarrollo de Software | U.E. Distrito Metropolitano
+        </footer>
+
+    </div>
+
+    <script src="chatbot.js"></script>
+</body>
+</html>

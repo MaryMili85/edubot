@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #eaf2f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 700px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+/* ENCABEZADO */
+header {
+    background: #1769aa;
+    color: white;
+    padding: 12px 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-colegio {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: white;
+    padding: 2px;
+}
+
+header h1 {
+    font-size: 22px;
+}
+
+header p {
+    font-size: 13px;
+    opacity: 0.9;
+}
+
+/* CHAT CON LETRA MÁS PEQUEÑA Y COMPACTA */
+#chat {
+    height: 380px;
+    padding: 15px;
+    overflow-y: auto;
+    background: #f7f9fb;
+    font-size: 14px; /* Tamaño de fuente más pequeño para el contenido */
+}
+
+/* MENSAJES */
+.mensaje {
+    margin-bottom: 12px;
+    padding: 10px 12px;
+    border-radius: 12px;
+    max-width: 88%;
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    line-height: 1.35;
+}
+
+.mensaje p {
+    margin-top: 4px;
+}
+
+.avatar-msg {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.bot {
+    background: #d6eaf8;
+    margin-right: auto;
+}
+
+.usuario {
+    background: #d5f5e3;
+    margin-left: auto;
+    flex-direction: row-reverse;
+}
+
+/* OPCIONES / BOTONES MÓDULOS */
+.opciones {
+    padding: 10px 12px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+    background: #fff;
+}
+
+.opciones button {
+    border: none;
+    padding: 9px 6px;
+    border-radius: 8px;
+    background: #5dade2;
+    color: white;
+    cursor: pointer;
+    font-size: 12.5px; /* Botones con letra más pequeña */
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.opciones button:hover {
+    background: #2e86c1;
+}
+
+/* ENTRADA DE TEXTO */
+.entrada {
+    display: flex;
+    padding: 12px;
+    gap: 8px;
+    border-top: 1px solid #ddd;
+}
+
+.entrada input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    font-size: 13px;
+}
+
+.entrada button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    background: #1769aa;
+    color: white;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.entrada button:hover {
+    background: #0d47a1;
+}
+
+footer {
+    text-align: center;
+    padding: 8px;
+    font-size: 11px;
+    color: #666;
+    background: #f1f1f1;
+}
+
+/* CELULAR */
+@media(max-width:600px) {
+    .opciones {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #chat {
+        height: 360px;
+    }
+}
